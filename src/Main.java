@@ -40,13 +40,13 @@ public class Main {
             File dirs = new File(path, dir);
             if (!dirs.exists()) {
                 if (dirs.mkdir()) {
-                    sb.append(date + " <> Каталог " + dirs.getName() + " успешно создан в: " + dirs.getAbsolutePath());
+                    sb.append(date + " <> РљР°С‚Р°Р»РѕРі " + dirs.getName() + " СѓСЃРїРµС€РЅРѕ СЃРѕР·РґР°РЅ РІ: " + dirs.getAbsolutePath());
                     sb.append("\n");
                 } else {
-                    sb.append(date + " <> " + dirs.getName() + "Ошибка при создании!\n");
+                    sb.append(date + " <> " + dirs.getName() + "РћС€РёР±РєР° РїСЂРё СЃРѕР·РґР°РЅРёРё!\n");
                 }
             } else {
-                sb.append(date + " <> " + "Каталог был создан ранее\n");
+                sb.append(date + " <> " + "РљР°С‚Р°Р»РѕРі Р±С‹Р» СЃРѕР·РґР°РЅ СЂР°РЅРµРµ\n");
             }
         });
     }
@@ -57,16 +57,16 @@ public class Main {
                     if (!files.exists()) {
                         try {
                             if (files.createNewFile()) {
-                                sb.append(date + " <> Файл " + files.getName() + " успешно создан в: " + files.getAbsolutePath());
+                                sb.append(date + " <> Р¤Р°Р№Р» " + files.getName() + " СѓСЃРїРµС€РЅРѕ СЃРѕР·РґР°РЅ РІ: " + files.getAbsolutePath());
                                 sb.append("\n");
                             } else {
-                                sb.append(date + " <> " + files.getName() + "Ошибка при создании!\n");
+                                sb.append(date + " <> " + files.getName() + "РћС€РёР±РєР° РїСЂРё СЃРѕР·РґР°РЅРёРё!\n");
                             }
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
                     } else {
-                        sb.append(date + " <> " + "Файл был создан ранее\n");
+                        sb.append(date + " <> " + "Р¤Р°Р№Р» Р±С‹Р» СЃРѕР·РґР°РЅ СЂР°РЅРµРµ\n");
                     }
                 }
         );
